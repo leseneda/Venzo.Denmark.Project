@@ -1,3 +1,5 @@
+using Venzo.Denmark.Project.Services.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options => options.AddDefaultPolicy(config =>
@@ -15,6 +17,8 @@ builder.Services.AddSwaggerDocument(config =>
 });
 
 // Services
+
+builder.Services.AddProjectServices(builder.Configuration);
 
 var app = builder.Build();
 

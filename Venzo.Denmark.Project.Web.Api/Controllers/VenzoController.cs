@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Venzo.Denmark.Project.Services.Models.Venzo;
+using Venzo.Denmark.Project.Services.Venzo.Contract;
 
 namespace Venzo.Denmark.Project.Web.Api.Controllers
 {
@@ -7,21 +9,24 @@ namespace Venzo.Denmark.Project.Web.Api.Controllers
     {
 
         private readonly ILogger<VenzoController> _logger;
-
-        public VenzoController(ILogger<VenzoController> logger)
+        private readonly IVenzoService _venzoService;
+        public VenzoController(ILogger<VenzoController> logger,
+                               IVenzoService venzoService)
         {
             _logger = logger;
+            _venzoService = venzoService;
         }
 
         [HttpGet("Company")]
-        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(VenzoModel), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCompany()
         {
             try
             {
-                return Ok(await Task.FromResult("Venzo Software"));
+                var result = await _venzoService.GetCompanyAsync();
 
+                return Ok(result != default ? result : null);
             }
             catch (Exception exception)
             {

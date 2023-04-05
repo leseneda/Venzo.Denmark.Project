@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venzo.Denmark.Project.Web.Application", "Venzo.Denmark.Project.Web.Application\Venzo.Denmark.Project.Web.Application.csproj", "{241FD25B-9018-42ED-AA43-4BC9D38F6F2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venzo.Denmark.Project.Web.Application", "Venzo.Denmark.Project.Web.Application\Venzo.Denmark.Project.Web.Application.csproj", "{241FD25B-9018-42ED-AA43-4BC9D38F6F2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venzo.Denmark.Project.Web.Api", "Venzo.Denmark.Project.Web.Api\Venzo.Denmark.Project.Web.Api.csproj", "{817608DE-9EB3-4115-AA4F-9EC7656BB44A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venzo.Denmark.Project.Web.Api", "Venzo.Denmark.Project.Web.Api\Venzo.Denmark.Project.Web.Api.csproj", "{817608DE-9EB3-4115-AA4F-9EC7656BB44A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venzo.Denmark.Project.Web.Api.Client", "Venzo.Denmark.Project.Web.Api.Client\Venzo.Denmark.Project.Web.Api.Client.csproj", "{7CF8BC1D-4EFE-460C-9D21-A1ED0684C8BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venzo.Denmark.Project.Web.Api.Client", "Venzo.Denmark.Project.Web.Api.Client\Venzo.Denmark.Project.Web.Api.Client.csproj", "{7CF8BC1D-4EFE-460C-9D21-A1ED0684C8BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venzo.Denmark.Project.Services", "Venzo.Denmark.Project.Services\Venzo.Denmark.Project.Services.csproj", "{919F815D-BB91-48E2-B52A-8DF2889506ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venzo.Denmark.Project.Services.Models", "Venzo.Denmark.Project.Services.Models\Venzo.Denmark.Project.Services.Models.csproj", "{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{7CF8BC1D-4EFE-460C-9D21-A1ED0684C8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CF8BC1D-4EFE-460C-9D21-A1ED0684C8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CF8BC1D-4EFE-460C-9D21-A1ED0684C8BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919F815D-BB91-48E2-B52A-8DF2889506ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919F815D-BB91-48E2-B52A-8DF2889506ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919F815D-BB91-48E2-B52A-8DF2889506ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919F815D-BB91-48E2-B52A-8DF2889506ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

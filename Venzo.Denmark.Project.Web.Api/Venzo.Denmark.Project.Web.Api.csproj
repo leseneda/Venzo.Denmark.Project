@@ -13,6 +13,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Venzo.Denmark.Project.Services\Venzo.Denmark.Project.Services.csproj" />
+  </ItemGroup>
+
   <Target Name="NSwag" AfterTargets="Build">
 	<Exec Command="$(NSwagExe_Net60) run nswag.json /variables:Configuration=$(Configuration)" />
   </Target>

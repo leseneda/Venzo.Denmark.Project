@@ -16,4 +16,9 @@
     <ProjectReference Include="..\Venzo.Denmark.Project.Web.Api.Client\Venzo.Denmark.Project.Web.Api.Client.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\" />
+    <Folder Include="Layouts\" />
+  </ItemGroup>
+
 </Project>
