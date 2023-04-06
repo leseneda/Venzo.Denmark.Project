@@ -18,6 +18,7 @@ namespace Venzo.Denmark.Project.Web.Application.Extensions
             string baseUrl = configuration.GetSection("Project:Api:BaseUrl").Value;
 
             services.AddScoped<IVenzoClient, VenzoClient>(factory => new VenzoClient(baseUrl, factory.GetRequiredService<HttpClient>()));
+            services.AddScoped<ICustomersClient, CustomersClient>(factory => new CustomersClient(baseUrl, factory.GetRequiredService<HttpClient>()));
 
             services.AddAutoMapper(config => config.AddMappings(configuration));
         }

@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venzo.Denmark.Project.Web.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venzo.Denmark.Project.Web.Api.Client", "Venzo.Denmark.Project.Web.Api.Client\Venzo.Denmark.Project.Web.Api.Client.csproj", "{7CF8BC1D-4EFE-460C-9D21-A1ED0684C8BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venzo.Denmark.Project.Services", "Venzo.Denmark.Project.Services\Venzo.Denmark.Project.Services.csproj", "{919F815D-BB91-48E2-B52A-8DF2889506ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venzo.Denmark.Project.Services", "Venzo.Denmark.Project.Services\Venzo.Denmark.Project.Services.csproj", "{919F815D-BB91-48E2-B52A-8DF2889506ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venzo.Denmark.Project.Services.Models", "Venzo.Denmark.Project.Services.Models\Venzo.Denmark.Project.Services.Models.csproj", "{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venzo.Denmark.Project.Services.Models", "Venzo.Denmark.Project.Services.Models\Venzo.Denmark.Project.Services.Models.csproj", "{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

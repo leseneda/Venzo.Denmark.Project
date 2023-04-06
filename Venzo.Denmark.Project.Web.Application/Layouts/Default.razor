@@ -1,0 +1,27 @@
+﻿@inherits LayoutComponentBase
+
+<RadzenLayout class="rz-shadow-3">
+    <RadzenHeader>
+        <div class="d-flex align-items-center">
+            <RadzenSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" />
+            <RadzenLabel Text="Venzo Softwares" />
+        </div>
+    </RadzenHeader>
+    <RadzenSidebar @bind-Expanded="@sidebarExpanded" style="width:100%">
+        <RadzenPanelMenu>
+            <RadzenPanelMenuItem Text="Core Business" Icon="request_quote">
+                <RadzenPanelMenuItem Text="Customer" Icon="text_snippet" Path="customers" />
+                <RadzenPanelMenuItem Text="Item 2" Icon="currency_exchange" Path="compensationFund" />
+                <RadzenPanelMenuItem Text="Item 3" Icon="settings" Path="setting" />
+            </RadzenPanelMenuItem>
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+        <RadzenBody style="overflow:hidden;max-height:100%;">
+        <div class="p-0">
+            @Body
+        </div>
+    </RadzenBody>
+    <RadzenFooter class="rz-shadow-3">
+        <Footer />
+    </RadzenFooter>
+</RadzenLayout>

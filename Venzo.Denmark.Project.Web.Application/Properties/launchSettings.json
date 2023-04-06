@@ -2,6 +2,7 @@
   "profiles": {
     "Venzo.Denmark.Project.Web.Application": {
       "commandName": "Project",
+      "commandLineArgs": "--pathbase=/Venzo.Denmark.Project.Web.Application",
       "launchUrl": "Venzo.Denmark.Project.Web.Application/",
       "dotnetRunMessages": true,
       "launchBrowser": true,

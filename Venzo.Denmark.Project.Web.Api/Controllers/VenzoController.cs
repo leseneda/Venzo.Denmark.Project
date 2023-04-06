@@ -5,7 +5,7 @@ using Venzo.Denmark.Project.Services.Venzo.Contract;
 namespace Venzo.Denmark.Project.Web.Api.Controllers
 {
     [ApiController, Route("api/[controller]")]
-    public class VenzoController : Controller
+    public class VenzoController : ControllerBase
     {
 
         private readonly ILogger<VenzoController> _logger;
@@ -19,6 +19,7 @@ namespace Venzo.Denmark.Project.Web.Api.Controllers
 
         [HttpGet("Company")]
         [ProducesResponseType(typeof(VenzoModel), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCompany()
         {

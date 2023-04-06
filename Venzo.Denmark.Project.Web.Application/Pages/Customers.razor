@@ -1,0 +1,30 @@
+﻿@using Venzo.Denmark.Project.Web.Api.Client
+
+<div class="row">
+    <div class="col-12">
+        <h3 style="height:10px">Customers</h3>
+        <p style="height:15px">Customer list detail.</p>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-12">
+        <RadzenDataGrid @ref="dataGrid" Count="customersCount" TItem="CustomerModel" PageSize="pageSize"
+                        LoadData="@DataGrid_OnLoadDataAsync" Data="customers" IsLoading=isLoading
+                        AllowSorting="false" AllowPaging="true" AllowFiltering="false"
+                        ShowEmptyMessage=false Density="Density.Compact"
+                        PagerHorizontalAlign="HorizontalAlign.Center">
+            <Columns>
+                <RadzenDataGridColumn TItem="CustomerModel" Property="Id" Title="Id" Width="6%" />
+                <RadzenDataGridColumn TItem="CustomerModel" Property="Name" Title="Name" Width="12%" />
+                <RadzenDataGridColumn TItem="CustomerModel" Property="Address" Title="Address" Width="11%" />
+                <RadzenDataGridColumn TItem="CustomerModel" Property="City" Title="City" Width="11%" />
+                <RadzenDataGridColumn TItem="CustomerModel" Property="Region" Title="Region" Width="11%" />
+                <RadzenDataGridColumn TItem="CustomerModel" Property="PostalCode" Title="Postal Code" Width="11%" />
+                <RadzenDataGridColumn TItem="CustomerModel" Property="Country" Title="Country" Width="11%" />
+                <RadzenDataGridColumn TItem="CustomerModel" Property="Phone" Title="Phone" Width="11%" />
+                <RadzenDataGridColumn TItem="CustomerModel" Property="HomePage" Title="HomePage" Width="16%" />
+            </Columns>
+        </RadzenDataGrid>
+    </div>
+</div>
