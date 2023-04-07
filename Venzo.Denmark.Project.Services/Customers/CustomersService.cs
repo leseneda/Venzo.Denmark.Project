@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using Microsoft.Extensions.Logging;
-using System.Net.NetworkInformation;
+﻿using Microsoft.Extensions.Logging;
 using Venzo.Denmark.Project.Services.Customers.Contract;
 using Venzo.Denmark.Project.Services.Models.Base;
 using Venzo.Denmark.Project.Services.Models.Venzo;
@@ -11,13 +9,10 @@ namespace Venzo.Denmark.Project.Services.Customers
     public class CustomersService : ICustomersService
     {
         readonly ILogger<VenzoService> _logger;
-        readonly IMapper _mapper;
 
-        public CustomersService(ILogger<VenzoService> logger,
-                                IMapper mapper)
+        public CustomersService(ILogger<VenzoService> logger)
         {
             _logger = logger;
-            _mapper = mapper;
         }
 
         public async Task<PagingBaseModel<CustomerModel>> GetCustomersAsync(int skip, int take)
@@ -38,6 +33,7 @@ namespace Venzo.Denmark.Project.Services.Customers
             catch (Exception exception)
             {
                 _logger.LogError(exception, exception.Message);
+            
                 throw;
             }
         }

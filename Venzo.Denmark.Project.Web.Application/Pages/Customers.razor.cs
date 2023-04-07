@@ -12,6 +12,7 @@ namespace Venzo.Denmark.Project.Web.Application.Pages
         [Inject] ICustomersClient CustomersClient { get; set; }
         [Inject] ILogger<Customers> Logger { get; set; }
         [Inject] NotificationService NotificationService { get; set; }
+        [Inject] IConfiguration Configuration { get; set; }
 
         bool isLoading;
         int customersCount;
@@ -25,13 +26,12 @@ namespace Venzo.Denmark.Project.Web.Application.Pages
 
             try
             {
-                pageSize = 15;
-
+                pageSize = Configuration.GetRequiredSection("Project:Application:GridPagesize").Get<int>();
             }
             catch (ApiException exception)
             {
                 Logger.LogError(exception, exception.Message);
-                NotificationService.Notify(NotificationSeverity.Error, "Error", "A error happens, Try again or contact the tech support.", 5000);
+                NotificationService.Notify(NotificationSeverity.Error, "Error", "An error happened, try again or contact the tech support.", 5000);
             }
         }
 
@@ -46,7 +46,7 @@ namespace Venzo.Denmark.Project.Web.Application.Pages
             {
                 var result = await CustomersClient.GetCustomersAsync(args.Skip, args.Top);
 
-                if (result != null)
+                if (result != default)
                 {
                     customers = result.Items;
                     customersCount = result.Count;
@@ -59,7 +59,8 @@ namespace Venzo.Denmark.Project.Web.Application.Pages
             catch (Exception exception)
             {
                 Logger.LogError(exception, exception.Message);
-                NotificationService.Notify(NotificationSeverity.Error, "Error", "A error happens, Try again or contact the tech support.", 5000);
+                
+                NotificationService.Notify(NotificationSeverity.Error, "Error", "An error happened, try again or contact the tech support.", 5000);
             }
             finally
             {

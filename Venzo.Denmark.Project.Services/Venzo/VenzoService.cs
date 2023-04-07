@@ -34,6 +34,7 @@ namespace Venzo.Denmark.Project.Services.Venzo
             catch (Exception exception)
             {
                 _logger.LogError(exception, exception.Message);
+                
                 throw;
             }
         }
