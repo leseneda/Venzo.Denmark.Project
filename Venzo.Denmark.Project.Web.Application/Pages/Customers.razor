@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<div class="row mt-2">
+<div class="row mt-2" style="width:100%">
     <div class="col-12">
         <RadzenDataGrid @ref="dataGrid" Count="customersCount" TItem="CustomerModel" PageSize="pageSize"
                         LoadData="@DataGrid_OnLoadDataAsync" Data="customers" IsLoading=isLoading
