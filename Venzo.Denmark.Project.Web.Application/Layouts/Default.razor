@@ -4,15 +4,13 @@
     <RadzenHeader>
         <div class="d-flex align-items-center">
             <RadzenSidebarToggle Click="@(() => sidebarExpanded = !sidebarExpanded)" />
-            <RadzenLabel Text="Venzo Softwares" />
+            <RadzenLabel Text="VENZO_" />
         </div>
     </RadzenHeader>
     <RadzenSidebar @bind-Expanded="@sidebarExpanded" style="width:100%">
         <RadzenPanelMenu>
             <RadzenPanelMenuItem Text="Core Business" Icon="request_quote">
-                <RadzenPanelMenuItem Text="Customer" Icon="text_snippet" Path="customers" />
-                <RadzenPanelMenuItem Text="Item 2" Icon="currency_exchange" Path="item2" />
-                <RadzenPanelMenuItem Text="Item 3" Icon="settings" Path="item3" />
+                <RadzenPanelMenuItem Text="Customers" Icon="text_snippet" Path="customers" />
             </RadzenPanelMenuItem>
         </RadzenPanelMenu>
     </RadzenSidebar>

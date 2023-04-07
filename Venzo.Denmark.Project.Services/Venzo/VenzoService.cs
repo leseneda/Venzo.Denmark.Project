@@ -24,7 +24,7 @@ namespace Venzo.Denmark.Project.Services.Venzo
                 var model = new VenzoModel()
                 {
                     Id = 1,
-                    Name = "Venzo Software",
+                    Name = "VENZO_",
                     Description = "One of the most greatest software company in the world.",
                     Employees = 5000,
                 };
