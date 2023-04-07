@@ -1,8 +1,9 @@
-﻿namespace Venzo.Denmark.Project.Services.Models.Venzo
+﻿using Venzo.Denmark.Project.Services.Models.Base;
+
+namespace Venzo.Denmark.Project.Services.Models.Venzo
 {
-    public class CustomerModel
+    public class CustomerModel : BaseModel<int>
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public string City { get; set; }

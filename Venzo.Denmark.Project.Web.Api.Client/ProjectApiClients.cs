@@ -21,11 +21,11 @@ namespace Venzo.Denmark.Project.Web.Api.Client
     public partial interface ICustomersClient
     {
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PagingBaseOfCustomerModel> GetCustomersAsync(int? skip, int? take);
+        System.Threading.Tasks.Task<PagingBaseModelOfCustomerModel> GetCustomersAsync(int? skip, int? take);
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<PagingBaseOfCustomerModel> GetCustomersAsync(int? skip, int? take, System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<PagingBaseModelOfCustomerModel> GetCustomersAsync(int? skip, int? take, System.Threading.CancellationToken cancellationToken);
 
     }
 
@@ -65,14 +65,14 @@ namespace Venzo.Denmark.Project.Web.Api.Client
         partial void ProcessResponse(System.Net.Http.HttpClient client, System.Net.Http.HttpResponseMessage response);
 
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual System.Threading.Tasks.Task<PagingBaseOfCustomerModel> GetCustomersAsync(int? skip, int? take)
+        public virtual System.Threading.Tasks.Task<PagingBaseModelOfCustomerModel> GetCustomersAsync(int? skip, int? take)
         {
             return GetCustomersAsync(skip, take, System.Threading.CancellationToken.None);
         }
 
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <exception cref="ApiException">A server side error occurred.</exception>
-        public virtual async System.Threading.Tasks.Task<PagingBaseOfCustomerModel> GetCustomersAsync(int? skip, int? take, System.Threading.CancellationToken cancellationToken)
+        public virtual async System.Threading.Tasks.Task<PagingBaseModelOfCustomerModel> GetCustomersAsync(int? skip, int? take, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/Customers?");
@@ -118,7 +118,7 @@ namespace Venzo.Denmark.Project.Web.Api.Client
                         var status_ = (int)response_.StatusCode;
                         if (status_ == 200)
                         {
-                            var objectResponse_ = await ReadObjectResponseAsync<PagingBaseOfCustomerModel>(response_, headers_, cancellationToken).ConfigureAwait(false);
+                            var objectResponse_ = await ReadObjectResponseAsync<PagingBaseModelOfCustomerModel>(response_, headers_, cancellationToken).ConfigureAwait(false);
                             if (objectResponse_.Object == null)
                             {
                                 throw new ApiException("Response was null which was not expected.", status_, objectResponse_.Text, headers_, null);
@@ -489,7 +489,7 @@ namespace Venzo.Denmark.Project.Web.Api.Client
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.18.2.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class PagingBaseOfCustomerModel
+    public partial class PagingBaseModelOfCustomerModel
     {
 
         [System.Text.Json.Serialization.JsonPropertyName("count")]
@@ -505,13 +505,8 @@ namespace Venzo.Denmark.Project.Web.Api.Client
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.18.2.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class CustomerModel
+    public partial class CustomerModel : BaseModelOfInteger
     {
-
-        [System.Text.Json.Serialization.JsonPropertyName("id")]
-
-        [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
-        public int Id { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("name")]
 
@@ -556,13 +551,19 @@ namespace Venzo.Denmark.Project.Web.Api.Client
     }
 
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.18.2.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public partial class VenzoModel
+    public abstract partial class BaseModelOfInteger
     {
 
         [System.Text.Json.Serialization.JsonPropertyName("id")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.Never)]   
         public int Id { get; set; }
+
+    }
+
+    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.18.2.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v13.0.0.0))")]
+    public partial class VenzoModel : BaseModelOfInteger
+    {
 
         [System.Text.Json.Serialization.JsonPropertyName("name")]
 

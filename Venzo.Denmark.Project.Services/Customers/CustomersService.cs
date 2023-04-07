@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.Logging;
+using System.Net.NetworkInformation;
 using Venzo.Denmark.Project.Services.Customers.Contract;
 using Venzo.Denmark.Project.Services.Models.Base;
 using Venzo.Denmark.Project.Services.Models.Venzo;
@@ -19,13 +20,13 @@ namespace Venzo.Denmark.Project.Services.Customers
             _mapper = mapper;
         }
 
-        public async Task<PagingBase<CustomerModel>> GetCustomersAsync(int skip, int take)
+        public async Task<PagingBaseModel<CustomerModel>> GetCustomersAsync(int skip, int take)
         {
             try
             {
                 var result = LoadFakeData();
 
-                PagingBase<CustomerModel> pagingResult = new()
+                PagingBaseModel<CustomerModel> pagingResult = new()
                 {
                     Count = result.Count(),
                     Items = result.Skip(skip)
@@ -43,9 +44,7 @@ namespace Venzo.Denmark.Project.Services.Customers
 
         private static IEnumerable<CustomerModel> LoadFakeData()
         {
-            var listCount = Enumerable.Range(1, 100);
-
-            foreach (var item in listCount)
+            foreach (var item in Enumerable.Range(1, 100))
             {
                 yield return new CustomerModel()
                 {
@@ -55,9 +54,9 @@ namespace Venzo.Denmark.Project.Services.Customers
                     City = $"City {item}",
                     Country = $"Country {item}",
                     Region = $"Region {item}",
-                    Phone = new Random().Next(int.MinValue, int.MaxValue).ToString(),
-                    HomePage = $"www.homePage{item}.com",
-                    PostalCode = new Random().Next(int.MinValue, int.MaxValue).ToString(),
+                    Phone = new Random().Next(0, int.MaxValue).ToString(),
+                    HomePage = $"Http://www.homePage{item}.com",
+                    PostalCode = new Random().Next(0, int.MaxValue).ToString(),
                 };
             }
         }

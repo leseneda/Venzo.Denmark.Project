@@ -18,7 +18,7 @@ namespace Venzo.Denmark.Project.Web.Api.Controllers
         }
 
         [HttpGet("Customers")]
-        [ProducesResponseType(typeof(PagingBase<CustomerModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(PagingBaseModel<CustomerModel>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCustomers(int skip, int take)

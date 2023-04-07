@@ -5,7 +5,6 @@ namespace Venzo.Denmark.Project.Services.Customers.Contract
 {
     public interface ICustomersService
     {
-        //&&Task<IEnumerable<CustomerModel>> GetCustomersAsync(int skip, int take);
-        Task<PagingBase<CustomerModel>> GetCustomersAsync(int skip, int take);
+        Task<PagingBaseModel<CustomerModel>> GetCustomersAsync(int skip, int take);
     }
 }
