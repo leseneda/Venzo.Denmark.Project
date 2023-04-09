@@ -8,7 +8,8 @@ namespace Venzo.Denmark.Project.Web.Application.Extensions
     {
         public static void AddMappings(this IMapperConfigurationExpression mapConfiguration, IConfiguration configuration)
         {
-            mapConfiguration.CreateMap<client.VenzoModel, VenzoModel>().ReverseMap();
+            //mapConfiguration.CreateMap<client.VenzoModel, VenzoModel>().ReverseMap();
+            //mapConfiguration.CreateMap<client.RoomModel, RoomModel>().ReverseMap();
         }
     }
 }

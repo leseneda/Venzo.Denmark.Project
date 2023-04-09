@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venzo.Denmark.Project.Servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Venzo.Denmark.Project.Services.Models", "Venzo.Denmark.Project.Services.Models\Venzo.Denmark.Project.Services.Models.csproj", "{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venzo.Denmark.Project.Data", "Venzo.Denmark.Project.Data\Venzo.Denmark.Project.Data.csproj", "{83A04A85-D6DA-47A0-B279-D07D4D49B8CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BEEA22D-D0CD-45EF-8732-A0273CBBE699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A04A85-D6DA-47A0-B279-D07D4D49B8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A04A85-D6DA-47A0-B279-D07D4D49B8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A04A85-D6DA-47A0-B279-D07D4D49B8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A04A85-D6DA-47A0-B279-D07D4D49B8CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,21 @@
+﻿<div class="row">
+    <div class="col-12">
+        <p style="height:15px">Selecione a data e o motivo da cessação de contrato.</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <RadzenLabel Text="@($"Room: {Room.Name}")"></RadzenLabel>
+
+    <RadzenDatePicker @bind-Value=@dateFrom TValue="DateTime?" Placeholder="Datefrom" AllowInput=true />
+
+    <RadzenDatePicker @bind-Value=@dateTo TValue="DateTime?" Placeholder="DateTo" AllowInput=true ShowTime=false />
+
+    <RadzenNumeric @bind-Value=@numberOfPeople ShowUpDown=true  />
+
+    <RadzenButton Text="Confirm" class="w-100" ButtonStyle="ButtonStyle.Primary"
+                  Click="OnButtonClick_ConfirmAsync" />
+
+    <RadzenButton Text="Cancel" class="w-100" ButtonStyle="ButtonStyle.Primary"
+                  Click="OnButtonClick_CancelAsync" />
+</div>
